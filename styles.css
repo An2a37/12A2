@@ -1,0 +1,219 @@
+body {
+    background-image: url('https://github.com/An2a37/12A2/blob/main/375220696_824294605804171_3759402433722056441_n.jpg?raw=true');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.navbar {
+    background: linear-gradient(to right, #001f3f, #001a33);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    color: #FFD700;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.9);
+    color: #001f3f;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+/*Logo lớp*/
+.logo {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    font-family: serif;
+    text-align: center; /* Giữ chữ ở giữa */
+}
+
+.logo img {
+    width: 80px; /* Kích thước cố định */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    display: block; /* Fix lệch trái */
+    margin: auto; /* Căn giữa */
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+
+/* Ban Cán Sự */
+.bcs-member {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    font-family: serif;
+}
+
+.bcs-member img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bcs-member:hover {
+    transform: scale(1.05);
+}
+
+.bcs-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+/* Thành Tích */
+.achievement {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.achievement p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #001f3f;
+}
+
+span {
+    font-weight: bold;
+    color: #0074D9;
+}
+/* Gallery */
+.activity {
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.activity h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #001f3f;
+}
+
+.slider-container {
+    width: 80%;
+    max-width: 800px;
+    height: 350px; /* Đảm bảo chiều cao cố định */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Tổng chiều rộng = số lượng ảnh × 100% */
+}
+
+.slide {
+    flex: 0 0 100%; /* Mỗi slide chiếm toàn bộ chiều rộng */
+    display: flex;
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center; /* Căn giữa dọc */
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%; /* Giới hạn chiều cao theo container */
+    height: auto; /* Đảm bảo tỷ lệ ảnh không bị méo */
+    object-fit: contain; /* Đảm bảo ảnh hiển thị đầy đủ */
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
